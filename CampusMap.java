@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Hashtable;
 
 public class CampusMap {
 
@@ -39,7 +40,7 @@ public class CampusMap {
         }
         return mapString;
     }
-
+   
     public static void main(String[] args) {
         CampusMap myMap = new CampusMap();
         myMap.addBuilding(new Building("Ford Hall", "100 Green Street Northampton, MA 01063", 4));
@@ -47,13 +48,14 @@ public class CampusMap {
         myMap.addBuilding(new Building("Lawrence House", "99 Green Street", 4));
         myMap.addBuilding(new Building("Albright House", "7 Bedford Terrace", 4));
         myMap.addBuilding(new Building("Sage Hall", "144 Green Street", 4));
-        myMap.addBuilding(new Building("Campus Center", "100 Elm Street", 3));
-        myMap.addBuilding(new Building("Josten Library", "122 Green Street"));
+        myMap.addBuilding(new Cafe("Campus Center Cafe", "100 Elm Street", 1, 100, 100, 100, 100));
+        Hashtable<String, Boolean> collection = new Hashtable<>();
+        myMap.addBuilding(new Library("Josten Library", "122 Green Street",3, collection));
         myMap.addBuilding(new Building("Comstock House", "Mandelle Road"));
         myMap.addBuilding(new Building("College Hall", "Seelye Dr"));
-        myMap.addBuilding(new Building("Wilson House","16 Kensington Ave"));
-        myMap.addBuilding(new Building("Emerson House", "Pardise Road"));
-        myMap.addBuilding(new Building("Morris House", "101 Green Street"));
+        myMap.addBuilding(new House("Wilson House","16 Kensington Ave", 4, false, true));
+        myMap.addBuilding(new House("Emerson House", "Pardise Road", 4, true, false));
+        myMap.addBuilding(new House("Morris House", "101 Green Street",4, false, false));
         System.out.println(myMap);
     }
     

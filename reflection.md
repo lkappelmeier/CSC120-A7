@@ -8,4 +8,4 @@ Library
 House
 - I overloaded moveIn so that you can moveIn an arraylist of residents. I also did the same with moveOut.
 - What worked, what didn't, what advice would you give someone taking this course in the future?
-I am confused about if this is working on A6 or A7 because how do I bring things from the subclasses to the CampusMap?
+I am confused about if this is working on A6 or A7 because how do I bring things from the subclasses to the CampusMap? I just copy and pasted cafe house and library into A7.
